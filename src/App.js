@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Button from './components/Buttons/Button';
+import { Button } from './components/Buttons';
+import { Calculator } from './components/Calculators';
 
-const day = "Saturday";
+const day = "Hi";
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
     <div className="App">
       <p>Hello!</p>
       <p>{day}</p>
+      <Calculator></Calculator>
+
       <Button label="Don't click me"></Button>
       <Button label="sdsdsd"></Button>
       <Button></Button>
