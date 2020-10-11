@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';  //dodanie HOOKow
     
 function Calculator() {
+
+    const [amount, setAmount] = useState(0);
 
     return (
     <form>
         <div>
-            <input type="number" placeholder="Wartosc"></input>
+            <input type="number" placeholder="Wartosc" onChange = {(event) => { amount = event.target.value} }></input>
         </div>
 
         <div>
             <span>From: </span>
-            <select>
+            <select onChange = {(event) => console.log(event.target.value)}>
                 <option value="NOK">NOK</option>
                 <option value="PLN">PLN</option>
             </select>
@@ -18,11 +20,12 @@ function Calculator() {
 
         <div>
             <span>To: </span>
-            <select>
+            <select onChange = {(event) => console.log(event.target.value)}>
                 <option value="NOK">NOK</option>
                 <option value="PLN">PLN</option>
             </select>
         </div>
+        <div>Result: </div>
     </form>
     );
 }
