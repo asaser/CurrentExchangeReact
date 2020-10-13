@@ -1,31 +1,46 @@
 import React, { useState } from 'react';  //dodanie HOOKow
-    
+
+// state = {
+//     amount: 0,
+//     currencyFrom: 'NOK',
+//     currencyTo: 'PLN'
+// }
+
+// this.useState({ currencyFrom: event.target.value}, () => {
+//     aktualny stan aplikacji
+// })
+
+function Select({ value, setCurrency }) {
+    return (
+    <select value = {value} onChange = {(event) => { setCurrency(event.target.value); }}>
+        <option value="NOK">NOK</option>
+        <option value="PLN">PLN</option>
+    </select>
+    );
+}
+
 function Calculator() {
 
     const [amount, setAmount] = useState(0);
+    const [currencyFrom, setCurrencyFrom] = useState('NOK');
+    const [currencyTo, setCurrencyTo] = useState('PLN');
 
     return (
     <form>
         <div>
-            <input type="number" placeholder="Wartosc" onChange = {(event) => { amount = event.target.value} }></input>
+            <input type="number" placeholder="Wartosc" onChange = {(event) => { setAmount(event.target.value); }}></input>
         </div>
 
         <div>
             <span>From: </span>
-            <select onChange = {(event) => console.log(event.target.value)}>
-                <option value="NOK">NOK</option>
-                <option value="PLN">PLN</option>
-            </select>
+            <Select value = {currencyFrom} setCurrency = {setCurrencyFrom}></Select>
         </div>
 
         <div>
             <span>To: </span>
-            <select onChange = {(event) => console.log(event.target.value)}>
-                <option value="NOK">NOK</option>
-                <option value="PLN">PLN</option>
-            </select>
+            <Select value = {currencyTo} setCurrency = {setCurrencyTo}></Select>
         </div>
-        <div>Result: </div>
+        <div>Result: {amount}</div>
     </form>
     );
 }
