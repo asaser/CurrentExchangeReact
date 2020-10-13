@@ -1,4 +1,5 @@
 import React, { useState } from 'react';  //dodanie HOOKow
+import { Button } from '../Buttons';
 
 // state = {
 //     amount: 0,
@@ -24,9 +25,10 @@ function Calculator() {
     const [amount, setAmount] = useState(0);
     const [currencyFrom, setCurrencyFrom] = useState('NOK');
     const [currencyTo, setCurrencyTo] = useState('PLN');
+    const handleSubmit = (event) => { event.preventDefault(); }
 
     return (
-    <form>
+    <form onSubmit = {handleSubmit}>
         <div>
             <input type="number" placeholder="Wartosc" onChange = {(event) => { setAmount(event.target.value); }}></input>
         </div>
@@ -41,6 +43,7 @@ function Calculator() {
             <Select value = {currencyTo} setCurrency = {setCurrencyTo}></Select>
         </div>
         <div>Result: {amount}</div>
+        <Button type="submit">Click</Button>
     </form>
     );
 }

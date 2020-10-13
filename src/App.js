@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       <p>{day}</p>
       <Calculator></Calculator>
-
    {/* <App>
       <Header>
         <Menu></Menu>

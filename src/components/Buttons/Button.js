@@ -6,7 +6,7 @@ function Button(props) {
     );
   }
   Button.defaultProps =  {
-    label: "Write something"
+    label: "Click"
   }
 
   export default Button;
