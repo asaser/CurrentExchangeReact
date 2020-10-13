@@ -25,7 +25,11 @@ function Calculator() {
     const [amount, setAmount] = useState(0);
     const [currencyFrom, setCurrencyFrom] = useState('NOK');
     const [currencyTo, setCurrencyTo] = useState('PLN');
-    const handleSubmit = (event) => { event.preventDefault(); }
+    const handleSubmit = (event) => { 
+        
+        event.preventDefault(); 
+        fetch('https://api.ratesapi.io/api/latest?base=PLN');
+    }
 
     return (
     <form onSubmit = {handleSubmit}>
