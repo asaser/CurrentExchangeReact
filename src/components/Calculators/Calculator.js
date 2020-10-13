@@ -22,19 +22,24 @@ function Select({ value, setCurrency }) {
 
 function Calculator() {
 
+    const [result, setResault] = useState(0);
     const [amount, setAmount] = useState(0);
     const [currencyFrom, setCurrencyFrom] = useState('NOK');
     const [currencyTo, setCurrencyTo] = useState('PLN');
     const handleSubmit = (event) => { 
         
         event.preventDefault(); 
-        fetch('https://api.ratesapi.io/api/latest?base=PLN');
+        fetch(`https://api.ratesapi.io/api/latest?base=${currencyFrom}`)
+        .then(response => response.json())
+        .then(data => {
+            setResault(amount * data.rates[currencyTo])
+        });
     }
 
     return (
     <form onSubmit = {handleSubmit}>
         <div>
-            <input type="number" placeholder="Wartosc" onChange = {(event) => { setAmount(event.target.value); }}></input>
+            <input value = {amount} type="number" placeholder="Wartosc" onChange = {(event) => { setAmount(event.target.value); }}></input>
         </div>
 
         <div>
@@ -46,7 +51,7 @@ function Calculator() {
             <span>To: </span>
             <Select value = {currencyTo} setCurrency = {setCurrencyTo}></Select>
         </div>
-        <div>Result: {amount}</div>
+        <div>Result: {result}</div>
         <Button type="submit">Click</Button>
     </form>
     );
