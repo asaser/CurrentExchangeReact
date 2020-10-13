@@ -1,22 +1,32 @@
-import React, { useState } from 'react';  //dodanie HOOKow
-import { Button } from '../Buttons';
+import React, { useState, useEffect } from 'react';  //dodanie HOOKow
+import { Button } from '../components/Buttons';
 
-// state = {
-//     amount: 0,
-//     currencyFrom: 'NOK',
-//     currencyTo: 'PLN'
-// }
 
-// this.useState({ currencyFrom: event.target.value}, () => {
-//     aktualny stan aplikacji
-// })
+const shortAPI = "https://api.ratesapi.io/api/latest?base=";
 
 function Select({ value, setCurrency }) {
+
+    const [currencies, setCurrencies] = useState( [] );
+
+    useEffect (() => {
+        fetch(`${shortAPI}PLN`)
+        .then(response => response.json())
+        .then (data => {
+            setCurrencies (Object.keys(data.rates))
+        });
+
+        return () => {
+            // clearInterval
+            // removeEventListener
+        }
+    }, []);
+
     return (
-    <select value = {value} onChange = {(event) => { setCurrency(event.target.value); }}>
-        <option value="NOK">NOK</option>
-        <option value="PLN">PLN</option>
-    </select>
+        <select value={value} onChange = {(event) => setCurrency(event.target.value)}>
+            {currencies.map((elem) => {
+            return <option key = {`index-${elem}`} value = {elem}>{elem}</option>
+            })}
+        </select>
     );
 }
 
@@ -29,10 +39,10 @@ function Calculator() {
     const handleSubmit = (event) => { 
         
         event.preventDefault(); 
-        fetch(`https://api.ratesapi.io/api/latest?base=${currencyFrom}`)
+        fetch(`${shortAPI}${currencyFrom}`)
         .then(response => response.json())
         .then(data => {
-            setResault(amount * data.rates[currencyTo])
+            setResault(amount * data.rates[currencyTo]);
         });
     }
 
