@@ -11,6 +11,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 import './App.css';
+
 // import { Button } from './components/Buttons';
 
 const day = "Current Exchange Value";
@@ -40,21 +41,6 @@ function App() {
             </Route>
           </Switch>
         </Router>
-
-   {/* <App>
-      <Header>
-        <Menu></Menu>
-      </Header>
-
-      <Main>
-
-      </Main>
-
-      <Footer>
-
-      </Footer>
-    </App>  */}
-
     </div>
   );
 }

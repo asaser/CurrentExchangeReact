@@ -1,11 +1,13 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
-function Button(props) {
+
+function ButtonClick(props) {
     return (
       <button>{props.label}</button>
     );
   }
-  Button.defaultProps =  {
+  ButtonClick.defaultProps =  {
     label: "Click"
   }
 

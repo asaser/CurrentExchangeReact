@@ -36,9 +36,9 @@ function Calculator() {
     const [amount, setAmount] = useState(0);
     const [currencyFrom, setCurrencyFrom] = useState('NOK');
     const [currencyTo, setCurrencyTo] = useState('PLN');
-    const handleSubmit = (event) => { 
-        
-        event.preventDefault(); 
+    const handleSubmit = (event) => {
+
+        event.preventDefault();
         fetch(`${shortAPI}${currencyFrom}`)
         .then(response => response.json())
         .then(data => {
