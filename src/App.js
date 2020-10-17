@@ -9,19 +9,14 @@ import {
 import Calculator from './pages/Calculator';
 // import Flags from './pages/Flags';
 import Navigation from './components/Navigations/Navigation';
-
 import './App.css';
 
-// import { Button } from './components/Buttons';
-
-const day = "Current Exchange Value";
 
 
 function App() {
   // JSX
   return (
     <div className="App">
-        <p>{day}</p>
 
       <Router>
           {/* <ul>

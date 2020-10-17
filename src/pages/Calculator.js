@@ -52,14 +52,20 @@ function Calculator() {
 
     <Container>
         <Row>
-            <Col>
+            <Col xs={5}>
         <div>
             <div><span>From: </span></div>
             <Select value = {currencyFrom} setCurrency = {setCurrencyFrom}></Select>
         </div>
             </Col>
 
-            <Col>
+            <Col xs={2}>
+            <div>
+                <img src="paypal.png" />
+            </div>
+            </Col>
+
+            <Col xs={5}>
         <div>
             <div><span>To: </span></div>
             <Select value = {currencyTo} setCurrency = {setCurrencyTo}></Select>
@@ -72,16 +78,18 @@ function Calculator() {
         <Form.Control size="lg" type="number" placeholder="0"
         value = {amount} onChange = {(event) => { setAmount(event.target.value); }}>
         </Form.Control>
-    </Form.Group>    
+    </Form.Group>
 
     <Container>
         <Row className="justify-content-lg-center">
             <Col lg="auto">
                 <div>Result: {result}</div>
-                <Button variant="success" block type="submit">Click</Button>
             </Col>
         </Row>
     </Container>
+
+    <Button variant="success" block type="submit">Click</Button>
+
     </form>
     );
 }
