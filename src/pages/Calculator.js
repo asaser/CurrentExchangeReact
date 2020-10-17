@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';  //dodanie HOOKow
+import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Button } from '../components/Buttons';
 
 
@@ -32,8 +33,8 @@ function Select({ value, setCurrency }) {
 
 function Calculator() {
 
-    const [result, setResault] = useState(0);
-    const [amount, setAmount] = useState(0);
+    const [result, setResault] = useState("0");
+    const [amount, setAmount] = useState();
     const [currencyFrom, setCurrencyFrom] = useState('NOK');
     const [currencyTo, setCurrencyTo] = useState('PLN');
     const handleSubmit = (event) => {
@@ -48,24 +49,41 @@ function Calculator() {
 
     return (
     <form onSubmit = {handleSubmit}>
-        <div>
-            <input value = {amount} type="number" placeholder="Wartosc" onChange = {(event) => { setAmount(event.target.value); }}></input>
-        </div>
 
+    <Container>
+        <Row>
+            <Col>
         <div>
-            <span>From: </span>
+            <div><span>From: </span></div>
             <Select value = {currencyFrom} setCurrency = {setCurrencyFrom}></Select>
         </div>
+            </Col>
 
+            <Col>
         <div>
-            <span>To: </span>
+            <div><span>To: </span></div>
             <Select value = {currencyTo} setCurrency = {setCurrencyTo}></Select>
         </div>
-        <div>Result: {result}</div>
-        <Button type="submit">Click</Button>
+            </Col>
+        </Row>
+    </Container>
+
+    <Form.Group>
+        <Form.Control size="lg" type="number" placeholder="0"
+        value = {amount} onChange = {(event) => { setAmount(event.target.value); }}>
+        </Form.Control>
+    </Form.Group>    
+
+    <Container>
+        <Row className="justify-content-lg-center">
+            <Col lg="auto">
+                <div>Result: {result}</div>
+                <Button variant="success" block type="submit">Click</Button>
+            </Col>
+        </Row>
+    </Container>
     </form>
     );
 }
-
 
 export default Calculator;

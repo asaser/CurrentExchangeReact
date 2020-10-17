@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 import Calculator from './pages/Calculator';
-import About from './pages/About';
-import Contact from './pages/Contact';
+// import Flags from './pages/Flags';
+import Navigation from './components/Navigations/Navigation';
 
 import './App.css';
 
@@ -24,21 +24,18 @@ function App() {
         <p>{day}</p>
 
       <Router>
-          <ul>
+          {/* <ul>
            <li><Link to="">HOME</Link></li>
-           <li><Link to="/about">ABOUT</Link></li>
-           <li><Link to="/contact">CONTACT</Link></li>
-          </ul>
+           <li><Link to="/flags">Flags</Link></li>
+          </ul> */}
+          <Navigation></Navigation>
           <Switch>
             <Route path="/" exact>
             <Calculator></Calculator>
             </Route>
-            <Route path="/about">
-            <About></About>
-            </Route>
-            <Route path="/contact">
-            <Contact></Contact>
-            </Route>
+            {/* <Route path="/flags">
+            <Flags></Flags>
+            </Route> */}
           </Switch>
         </Router>
     </div>
