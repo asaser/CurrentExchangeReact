@@ -19,7 +19,7 @@ function App() {
     <div className="App">
 
       <Router>
-          <Navigation></Navigation>
+          {/* <Navigation></Navigation> */}
           <Switch>
             <Route path="/" exact>
             <CurrentExchange></CurrentExchange>
