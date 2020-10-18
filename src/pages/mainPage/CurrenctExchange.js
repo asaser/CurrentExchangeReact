@@ -32,7 +32,7 @@ function Select({ value, setCurrency }) {
     );
 }
 
-function Calculator() {
+function CurrenctExchange() {
 
     const [result, setResault] = useState("0");
     const [amount, setAmount] = useState();
@@ -96,7 +96,7 @@ function Calculator() {
             </Col>
         </Row>
     </Container>
-    
+
     <Container>
         <Row className="buttonValue">
             <Col lg={8}>
@@ -111,4 +111,4 @@ function Calculator() {
     );
 }
 
-export default Calculator;
+export default CurrenctExchange;

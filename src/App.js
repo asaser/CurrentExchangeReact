@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import Calculator from './pages/mainPage/CurrenctExchange';
+import Calculator from './pages/mainPage/CurrenctExchange;
 // import Flags from './pages/Flags';
 import Navigation from './components/Navigations/Navigation';
 import './App.css';
