@@ -32,7 +32,7 @@ function Select({ value, setCurrency }) {
     );
 }
 
-function CurrenctExchange() {
+function CurrentExchange() {
 
     const [result, setResault] = useState("0");
     const [amount, setAmount] = useState();
@@ -111,4 +111,4 @@ function CurrenctExchange() {
     );
 }
 
-export default CurrenctExchange;
+export default CurrentExchange;
