@@ -53,7 +53,7 @@ function Calculator() {
 
     <Container>
         <Row className="currencySelectionValue">
-            <Col>
+            <Col className="chooseCountry">
         <div>
             <div><span>From: </span></div>
             <Select value = {currencyFrom} setCurrency = {setCurrencyFrom}></Select>
@@ -61,12 +61,16 @@ function Calculator() {
             </Col>
 
             <Col md="auto">
-            <div>
-                <img src="./logoNavbar.png" />
-            </div>
+        <div>
+                <img 
+                src="./logoNavbar.png"
+                width="250px"
+                height="250px"
+                />
+        </div>
             </Col>
 
-            <Col>
+            <Col className="chooseCountry">
         <div>
             <div><span>To: </span></div>
             <Select value = {currencyTo} setCurrency = {setCurrencyTo}></Select>
@@ -76,9 +80,9 @@ function Calculator() {
     </Container>
 
     <Form.Group>
-        <Form.Row className="formControlValue">
+        <Form.Row className="formControl">
             <Col lg={7}>
-                <Form.Control size="lg" type="number" placeholder="0"
+                <Form.Control className="formControlValue" size="lg" type="number" placeholder="0"
                 value = {amount} onChange = {(event) => { setAmount(event.target.value); }}>
                 </Form.Control>
             </Col>

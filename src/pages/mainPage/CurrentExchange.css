@@ -6,10 +6,16 @@
     font: small-caps bold 30px "Times New Roman";
 }
 
-.formControlValue {
+.formControl {
     padding: 40px 0 30px 0;
     justify-content: center;
 }
+
+.formControlValue {
+    background-color: #c9d7df97;
+    border: 10px black;
+}
+
 
 .resultValue {
     font: small-caps bold 30px "Times New Roman";
@@ -18,4 +24,8 @@
 
 .buttonValue {
     justify-content: center;
+}
+
+.chooseCountry {
+    align-self: center;
 }

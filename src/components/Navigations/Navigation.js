@@ -12,8 +12,8 @@ function Navigation() {
             <Navbar.Brand>
                 <img
                     src="./logoNavbar.png"
-                    width="30"
-                    height="30"
+                    width="30px"
+                    height="30px"
                     className="d-inline-block align-top mainLogoNavn"
                 />
              <b>{navbarText}</b>
