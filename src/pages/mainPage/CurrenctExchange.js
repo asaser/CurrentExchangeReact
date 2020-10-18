@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';  //dodanie HOOKow
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Button } from '../../components/Buttons';
+import './CurrentExchange.css';
 
 
 const shortAPI = "https://api.ratesapi.io/api/latest?base=";
@@ -48,24 +49,24 @@ function Calculator() {
     }
 
     return (
-    <form onSubmit = {handleSubmit}>
+    <form className="mainForm" onSubmit = {handleSubmit}>
 
     <Container>
-        <Row>
-            <Col xs={5}>
+        <Row className="currencySelectionValue">
+            <Col>
         <div>
             <div><span>From: </span></div>
             <Select value = {currencyFrom} setCurrency = {setCurrencyFrom}></Select>
         </div>
             </Col>
 
-            <Col xs={2}>
+            <Col md="auto">
             <div>
                 <img src="./logoNavbar.png" />
             </div>
             </Col>
 
-            <Col xs={5}>
+            <Col>
         <div>
             <div><span>To: </span></div>
             <Select value = {currencyTo} setCurrency = {setCurrencyTo}></Select>
@@ -75,20 +76,32 @@ function Calculator() {
     </Container>
 
     <Form.Group>
-        <Form.Control size="lg" type="number" placeholder="0"
-        value = {amount} onChange = {(event) => { setAmount(event.target.value); }}>
-        </Form.Control>
+        <Form.Row className="formControlValue">
+            <Col lg={7}>
+                <Form.Control size="lg" type="number" placeholder="0"
+                value = {amount} onChange = {(event) => { setAmount(event.target.value); }}>
+                </Form.Control>
+            </Col>
+        </Form.Row>
     </Form.Group>
 
     <Container>
-        <Row className="justify-content-lg-center">
+        <Row className="resultValue justify-content-lg-center">
             <Col lg="auto">
                 <div>Result: {result}</div>
             </Col>
         </Row>
     </Container>
-
-    <Button variant="success" block type="submit">Calculate the money</Button>
+    
+    <Container>
+        <Row className="buttonValue">
+            <Col lg={8}>
+                <Button size="lg" variant="success" type="submit" block>
+                    <b>Calculate the money</b>
+                </Button>
+            </Col>
+        </Row>
+    </Container>
 
     </form>
     );

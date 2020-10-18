@@ -1,0 +1,21 @@
+.mainForm {
+    margin-top: 50px;
+}
+
+.currencySelectionValue {
+    font: small-caps bold 30px "Times New Roman";
+}
+
+.formControlValue {
+    padding: 40px 0 30px 0;
+    justify-content: center;
+}
+
+.resultValue {
+    font: small-caps bold 30px "Times New Roman";
+    padding-bottom: 40px;
+}
+
+.buttonValue {
+    justify-content: center;
+}
