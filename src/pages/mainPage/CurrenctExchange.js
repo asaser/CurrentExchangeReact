@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';  //dodanie HOOKow
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import { Button } from '../components/Buttons';
+import { Button } from '../../components/Buttons';
 
 
 const shortAPI = "https://api.ratesapi.io/api/latest?base=";
@@ -61,7 +61,7 @@ function Calculator() {
 
             <Col xs={2}>
             <div>
-                <img src="paypal.png" />
+                <img src="./logoNavbar.png" />
             </div>
             </Col>
 
@@ -88,7 +88,7 @@ function Calculator() {
         </Row>
     </Container>
 
-    <Button variant="success" block type="submit">Click</Button>
+    <Button variant="success" block type="submit">Calculate the money</Button>
 
     </form>
     );

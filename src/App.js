@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import Calculator from './pages/Calculator';
+import Calculator from './pages/mainPage/CurrenctExchange';
 // import Flags from './pages/Flags';
 import Navigation from './components/Navigations/Navigation';
 import './App.css';
@@ -19,10 +19,6 @@ function App() {
     <div className="App">
 
       <Router>
-          {/* <ul>
-           <li><Link to="">HOME</Link></li>
-           <li><Link to="/flags">Flags</Link></li>
-          </ul> */}
           <Navigation></Navigation>
           <Switch>
             <Route path="/" exact>

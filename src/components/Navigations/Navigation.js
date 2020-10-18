@@ -1,21 +1,22 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
+import './Navigation.css';
+
 
 function Navigation() {
 
-    const day = "Current Exchange Value";
+    const navbarText = "Current Exchange Value";
 
     return (
-        <Navbar fixed="top" bg="transparent" variant="transparent">
-            <Navbar.Brand hfer="#home">
-                <img 
-                alt=""
-                src="./testlogo.png"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-                /> {' '}
-                <b>{day}</b>
+        <Navbar className="mainNav" fixed="top" bg="transparent" variant="transparent">
+            <Navbar.Brand>
+                <img
+                    src="./logoNavbar.png"
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top mainLogoNavn"
+                />
+             <b>{navbarText}</b>
             </Navbar.Brand>
         </Navbar>
     );
