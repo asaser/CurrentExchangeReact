@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import CurrentExchange from './pages/mainPage/CurrentExchange;
+import Calculate from './pages/mainPage/Calculate;
 // import Flags from './pages/Flags';
 import Navigation from './components/Navigations/Navigation';
 import './App.css';
@@ -22,7 +22,7 @@ function App() {
           {/* <Navigation></Navigation> */}
           <Switch>
             <Route path="/" exact>
-            <CurrentExchange></CurrentExchange>
+            <Calculate></Calculate>
             </Route>
             {/* <Route path="/flags">
             <Flags></Flags>

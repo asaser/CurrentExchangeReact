@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';  //dodanie HOOKow
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Button } from '../../components/Buttons';
-import './CurrentExchange.css';
+import './Calculate.css';
 
 
 const shortAPI = "https://api.ratesapi.io/api/latest?base=";
@@ -32,7 +32,7 @@ function Select({ value, setCurrency }) {
     );
 }
 
-function CurrentExchange() {
+function Calculate() {
 
     const [result, setResault] = useState("0");
     const [amount, setAmount] = useState();
@@ -111,4 +111,4 @@ function CurrentExchange() {
     );
 }
 
-export default CurrentExchange;
+export default Calculate;
