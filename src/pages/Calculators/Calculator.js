@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';  //dodanie HOOKow
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Button } from '../../components/Buttons';
-import './Calculate.css';
+import './Calculator.css';
 
 
 const shortAPI = "https://api.ratesapi.io/api/latest?base=";
@@ -32,7 +32,7 @@ function Select({ value, setCurrency }) {
     );
 }
 
-function Calculate() {
+function Calculator() {
 
     const [result, setResault] = useState("0");
     const [amount, setAmount] = useState();
@@ -63,7 +63,7 @@ function Calculate() {
             <Col md="auto">
         <div>
                 <img 
-                alt="./logoNavbar.png"
+                src="./logoNavbar.png"
                 width="250px"
                 height="250px"
                 />
@@ -111,4 +111,4 @@ function Calculate() {
     );
 }
 
-export default Calculate;
+export default Calculator;

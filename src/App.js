@@ -2,11 +2,11 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  // Link,
+  Link,
   Route
 } from 'react-router-dom';
 
-import Calculate from './pages/mainPage/Calculate';
+import Calculator from './pages/Calculators/Calculator';
 // import Flags from './pages/Flags';
 import Navigation from './components/Navigations/Navigation';
 import './App.css';
@@ -22,7 +22,7 @@ function App() {
           <Navigation></Navigation>
           <Switch>
             <Route path="/" exact>
-            <Calculate></Calculate>
+            <Calculator></Calculator>
             </Route>
             {/* <Route path="/flags">
             <Flags></Flags>
