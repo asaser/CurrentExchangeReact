@@ -24,5 +24,15 @@
  <img src="ReadmeIMG\ReadmeResultButton.png"/>
 </p>
 
+4. Simple and clear layout and colors of the website makes it easy to use
  
+## What this app for?
+
+Thanks to the use of API, you can check the currency rate in real time.
+You can choose two countries from the list with great variety of countries and compare the currencies between them.
+
+Thanks to its simple appearance easily you will notice where the result of the currency comparison appears.
+
+
+
 
