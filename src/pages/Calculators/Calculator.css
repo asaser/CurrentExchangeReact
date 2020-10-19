@@ -29,3 +29,7 @@
 .chooseCountry {
     align-self: center;
 }
+
+.chooseCountry Select {
+    background-color: #c9d7df97;
+}

@@ -19,7 +19,6 @@ function Select({ value, setCurrency }) {
 
         return () => {
             // clearInterval
-            // removeEventListener
         }
     }, []);
 
