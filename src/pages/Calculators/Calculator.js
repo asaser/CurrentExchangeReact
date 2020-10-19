@@ -62,7 +62,7 @@ function Calculator() {
 
             <Col md="auto">
         <div>
-                <img 
+                <img
                 src="./logoNavbar.png"
                 width="250px"
                 height="250px"
