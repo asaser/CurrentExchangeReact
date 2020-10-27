@@ -19,9 +19,8 @@ function App() {
     <div className="App">
 
       <Router>
-      <Switch>
           <Navigation></Navigation>
-          
+          <Switch>
             <Route>
             <Calculator></Calculator>
             </Route>
