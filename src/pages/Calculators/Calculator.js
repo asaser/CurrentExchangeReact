@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';  //dodanie HOOKow
+import React, { useState, useEffect } from 'react';  //add HOOKow
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Button } from '../../components/Buttons';
 import './Calculator.css';

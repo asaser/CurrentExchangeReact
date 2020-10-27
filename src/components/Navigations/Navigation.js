@@ -15,7 +15,7 @@ function Navigation() {
                     alt=""
                     width="30px"
                     height="30px"
-                    className="d-inline-block align-top mainLogoNavn"
+                    className="d-inline-block align-top mainLogoNav"
                 />
              <b>{navbarText}</b>
             </Navbar.Brand>

@@ -6,9 +6,9 @@ import {
   Route
 } from 'react-router-dom';
 
-import Calculator from './pages/Calculators/Calculator';
-// import Flags from './pages/Flags';
 import Navigation from './components/Navigations/Navigation';
+
+import Calculator from '../src/pages/Calculators/Calculator';
 import './App.css';
 
 
@@ -21,7 +21,7 @@ function App() {
       <Router>
           <Navigation></Navigation>
           <Switch>
-            <Route path="/" exact>
+            <Route>
             <Calculator></Calculator>
             </Route>
             {/* <Route path="/flags">
