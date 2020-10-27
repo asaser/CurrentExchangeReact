@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  // Switch,
+  Switch,
   // Link,
   Route
 } from 'react-router-dom';
@@ -20,14 +20,14 @@ function App() {
 
       <Router>
           <Navigation></Navigation>
-
+          <Switch>
             <Route>
             <Calculator></Calculator>
             </Route>
             {/* <Route path="/flags">
             <Flags></Flags>
             </Route> */}
-
+          </Switch>
         </Router>
 
     </div>
