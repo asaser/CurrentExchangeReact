@@ -63,6 +63,7 @@ function Calculator() {
         <div>
                 <img
                 src="./logoNavbar.png"
+                alt=""
                 width="250px"
                 height="250px"
                 />
