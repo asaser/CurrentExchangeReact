@@ -19,8 +19,11 @@ function App() {
     <div className="App">
 
       <Router>
-          <Navigation></Navigation>
+          
           <Switch>
+            <Route>
+            <Navigation></Navigation>
+            </Route>
             <Route>
             <Calculator></Calculator>
             </Route>
