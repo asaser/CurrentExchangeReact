@@ -1,7 +1,7 @@
 # Current Exchange React App
 
-# DEMO
-# https://asaser.github.io/CurrentExchangeReact/#
+## DEMO
+## https://asaser.github.io/CurrentExchangeReact/#
 
 <p align="center">
 <img src="ReadmeIMG\ReadmeMainPage.png">
