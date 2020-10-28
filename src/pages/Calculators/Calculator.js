@@ -33,7 +33,7 @@ function Select({ value, setCurrency }) {
 
 function Calculator() {
 
-    const [result, setResoult] = useState("0");
+    const [result, setResault] = useState("0");
     const [amount, setAmount] = useState();
     const [currencyFrom, setCurrencyFrom] = useState('NOK');
     const [currencyTo, setCurrencyTo] = useState('PLN');
@@ -43,7 +43,7 @@ function Calculator() {
         fetch(`${shortAPI}${currencyFrom}`)
         .then(response => response.json())
         .then(data => {
-            setResoult(amount * data.rates[currencyTo]);
+            setResault(amount * data.rates[currencyTo]);
         });
     }
 
