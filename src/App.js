@@ -22,7 +22,7 @@ function App() {
           <Navigation></Navigation>
           <Switch>
             <Route>
-            <Calculator path="/"></Calculator>
+            <Calculator></Calculator>
             </Route>
             {/* <Route path="/flags">
             <Flags></Flags>
