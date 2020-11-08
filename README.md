@@ -1,6 +1,6 @@
 # Current Exchange React App
 
-## DEMO
+## Program
 ## https://asaser.github.io/CurrentExchangeReact/#
 
 <p align="center">
