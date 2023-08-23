@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navigation from "./components/Navigations/Navigation";
-import Calculator from "../src/pages/Calculators/Calculator";
+import Calculator from "./pages/Calculators/Calculator";
 
 function App() {
   return (
