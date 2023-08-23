@@ -1,7 +1,7 @@
 # Current Exchange React App
 
 ## Program
-## https://asaser.github.io/CurrentExchangeReact/#
+## https://asaser.github.io/CurrentExchangeReact/
 
 ## Functionality
 
