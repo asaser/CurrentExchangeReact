@@ -1,30 +1,69 @@
-import React from "react";
-import { Navbar } from "react-bootstrap";
-import "./Navigation.css";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 import logoNavBar from "../../images/logoNavbar.png";
 
-function Navigation() {
-  const navbarText = "Current Exchange Value";
-
+function ResponsiveAppBar() {
   return (
-    <Navbar
-      className="mainNav"
-      fixed="top"
-      bg="transparent"
-      variant="transparent"
-    >
-      <Navbar.Brand>
-        <img
-          src={logoNavBar}
-          alt=""
-          width="30px"
-          height="30px"
-          className="d-inline-block align-top mainLogoNav"
-        />
-        <b>{navbarText}</b>
-      </Navbar.Brand>
-    </Navbar>
+    <AppBar position="static" style={{ backgroundColor: "transparent" }}>
+      <Container maxWidth="xl">
+        <Toolbar
+          disableGutters
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            variant="h6"
+            noWrap
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".2rem",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src={logoNavBar}
+              alt="Logo"
+              style={{ width: "30px", height: "30px" }}
+            />
+            <span>Money</span>
+          </Typography>
+          <Typography
+            variant="h5"
+            noWrap
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".2rem",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src={logoNavBar}
+              alt="Logo"
+              style={{ width: "30px", height: "30px" }}
+            />
+            <span
+              style={{
+                textAlign: "center",
+              }}
+            >
+              Money
+            </span>
+          </Typography>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
-
-export default Navigation;
+export default ResponsiveAppBar;
